@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Convert my CGPA to German scale</title>
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<section class="section wrapper wrapper-section">
+   <div class="container wrapper-column">
+      <h1 class="page-title">Convert my CGPA to German scale</h1>
+      <form name="countries" class="form" id="form">
+        <div class="form-group">
+            <input type="text" id="inputboxname" name="inputboxname" class="input-field" placeholder="Tell me your name" required>
+         </div>
+         <div class="form-group">
+            <span class="form-arrow"><i class="bx bx-chevron-down"></i></span>
+            <select name="country" id="country" class="dropdown">
+               <option value="du">Dhaka University</option>
+               <option value="ju">Jagannath University</option>
+               <option value="jnu">JahangirNagar University</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <input type="text" id="cgpa" name="cgpa" class="input-field" placeholder="Tell me your current CGPA" required>
+         </div>
+         <div class="button-container">
+            <button type="submit" class="result-button">Result</button>
+         </div>
+      </form>
+   </div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>
