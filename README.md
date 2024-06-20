@@ -2,6 +2,10 @@
 
 Welcome to the Project CGPA repository! 
 
+## Website
+
+You can view the project website [here](https://arifulatwork.github.io/cgpa.github.io/).
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
