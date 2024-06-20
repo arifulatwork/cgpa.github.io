@@ -55,6 +55,20 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (cgpa >= 1.00) percentage = 60 + (cgpa - 1.00) * 10;
         else percentage = 0;
     }
+    else if (university === 'utm') {
+    if (cgpa >= 3.90) percentage = 90;
+    else if (cgpa >= 3.70) percentage = 80 + (cgpa - 3.70) * 10;
+    else if (cgpa >= 3.30) percentage = 75 + (cgpa - 3.30) * 10;
+    else if (cgpa >= 3.00) percentage = 70 + (cgpa - 3.00) * 10;
+    else if (cgpa >= 2.70) percentage = 65 + (cgpa - 2.70) * 10;
+    else if (cgpa >= 2.30) percentage = 60 + (cgpa - 2.30) * 10;
+    else if (cgpa >= 2.00) percentage = 55 + (cgpa - 2.00) * 10;
+    else if (cgpa >= 1.70) percentage = 50 + (cgpa - 1.70) * 10;
+    else if (cgpa >= 1.30) percentage = 45 + (cgpa - 1.30) * 10;
+    else if (cgpa >= 1.00) percentage = 40 + (cgpa - 1.00) * 10;
+    else if (cgpa >= 0.70) percentage = 35 + (cgpa - 0.70) * 10;
+    else percentage = 0;
+    }
 
         return percentage;
     }
