@@ -41,6 +41,20 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (cgpa >= 2.00) percentage = 40 + (cgpa - 2.00) * 20;
             else percentage = 0;
         } 
+        
+        else if (university === 'nsu') {
+        if (cgpa >= 3.93) percentage = 93;
+        else if (cgpa >= 3.70) percentage = 90 + (cgpa - 3.70) * 10;
+        else if (cgpa >= 3.30) percentage = 87 + (cgpa - 3.30) * 10;
+        else if (cgpa >= 3.00) percentage = 83 + (cgpa - 3.00) * 10;
+        else if (cgpa >= 2.70) percentage = 80 + (cgpa - 2.70) * 10;
+        else if (cgpa >= 2.30) percentage = 77 + (cgpa - 2.30) * 10;
+        else if (cgpa >= 2.00) percentage = 73 + (cgpa - 2.00) * 10;
+        else if (cgpa >= 1.70) percentage = 70 + (cgpa - 1.70) * 10;
+        else if (cgpa >= 1.30) percentage = 67 + (cgpa - 1.30) * 10;
+        else if (cgpa >= 1.00) percentage = 60 + (cgpa - 1.00) * 10;
+        else percentage = 0;
+    }
 
         return percentage;
     }
