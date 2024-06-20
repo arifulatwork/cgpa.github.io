@@ -237,6 +237,21 @@ video {
   background-color: rgba(255, 255, 255, 0.5); /* Slightly opaque on hover */
 }
 
+/* Result Container Styles for Glass Effect */
+.result-container {
+  margin-top: 2rem; /* Add some space above the result */
+  padding: 1.5rem; /* Add some padding inside the result container */
+  border-radius: 1rem; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Apply a blur effect for the glassmorphism */
+  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Slightly opaque border */
+  color: var(--color-black); /* Text color */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  text-align: center; /* Center-align the text */
+}
+
 /* Responsive Adjustments (Optional) */
 @media (max-width: 768px) {
   .container {
