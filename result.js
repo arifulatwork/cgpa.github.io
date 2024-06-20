@@ -57,17 +57,17 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (cgpa >= 1.00) percentage = 60 + (cgpa - 1.00) * 10;
             else percentage = 0;
         } else if (university === 'utm') {
-            if (cgpa >= 3.90) percentage = 90;
-            else if (cgpa >= 3.70) percentage = 80 + (cgpa - 3.70) * 10;
-            else if (cgpa >= 3.30) percentage = 75 + (cgpa - 3.30) * 10;
-            else if (cgpa >= 3.00) percentage = 70 + (cgpa - 3.00) * 10;
-            else if (cgpa >= 2.70) percentage = 65 + (cgpa - 2.70) * 10;
-            else if (cgpa >= 2.30) percentage = 60 + (cgpa - 2.30) * 10;
-            else if (cgpa >= 2.00) percentage = 55 + (cgpa - 2.00) * 10;
-            else if (cgpa >= 1.70) percentage = 50 + (cgpa - 1.70) * 10;
-            else if (cgpa >= 1.30) percentage = 45 + (cgpa - 1.30) * 10;
-            else if (cgpa >= 1.00) percentage = 40 + (cgpa - 1.00) * 10;
-            else if (cgpa >= 0.70) percentage = 35 + (cgpa - 0.70) * 10;
+            // Conversion for Universiti Teknologi Malaysia (UTM)
+            if (cgpa >= 3.67) percentage = 79;
+            else if (cgpa >= 3.33) percentage = 74;
+            else if (cgpa >= 3.00) percentage = 69;
+            else if (cgpa >= 2.67) percentage = 64;
+            else if (cgpa >= 2.33) percentage = 59;
+            else if (cgpa >= 2.00) percentage = 54;
+            else if (cgpa >= 1.67) percentage = 49;
+            else if (cgpa >= 1.33) percentage = 44;
+            else if (cgpa >= 1.00) percentage = 39;
+            else if (cgpa >= 0.67) percentage = 34;
             else percentage = 0;
         } else {
             // University not found, return undefined
