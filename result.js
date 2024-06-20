@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to display the result
     function displayResult(name, germanGrade) {
       const resultContainer = document.getElementById('resultContainer');
-      const gradeWords = ['Sehr Gut', 'Gut', 'Befriedigend', 'Ausreichend', 'Mangelhaft'];
+      const gradeWords = ['Very Good or German Grade 1', 'Good or German Grade 2', 'Satisfactory or German Grade 3', 'Sufficient or German Grade 4', 'Failed or German Grade 5'];
   
       // Clear previous result if any
       resultContainer.innerHTML = '';
