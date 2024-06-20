@@ -20,9 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Convert percentage to German grade
         const germanGrade = convertPercentageToGermanGrade(percentage);
 
-        // Display the result
+        // Display the result or error message
         const resultContainer = document.getElementById('resultContainer');
-        resultContainer.innerHTML = `<p>Hello ${name}, your German grade equivalent is: ${germanGrade}</p>`;
+        if (percentage !== undefined) {
+            resultContainer.innerHTML = `<p>Hello ${name}, your German grade equivalent is: ${germanGrade}</p>`;
+        } else {
+            resultContainer.innerHTML = `<p>Your university information is not in this list. Please ask the admin to add it. Admin email: <a href="mailto:arifulatwork@gmail.com">arifulatwork@gmail.com</a></p>`;
+        }
     });
 
     // Function to convert CGPA to percentage
@@ -40,35 +44,35 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (cgpa >= 2.25) percentage = 45 + (cgpa - 2.25) * 20;
             else if (cgpa >= 2.00) percentage = 40 + (cgpa - 2.00) * 20;
             else percentage = 0;
-        } 
-        
-        else if (university === 'nsu') {
-        if (cgpa >= 3.93) percentage = 93;
-        else if (cgpa >= 3.70) percentage = 90 + (cgpa - 3.70) * 10;
-        else if (cgpa >= 3.30) percentage = 87 + (cgpa - 3.30) * 10;
-        else if (cgpa >= 3.00) percentage = 83 + (cgpa - 3.00) * 10;
-        else if (cgpa >= 2.70) percentage = 80 + (cgpa - 2.70) * 10;
-        else if (cgpa >= 2.30) percentage = 77 + (cgpa - 2.30) * 10;
-        else if (cgpa >= 2.00) percentage = 73 + (cgpa - 2.00) * 10;
-        else if (cgpa >= 1.70) percentage = 70 + (cgpa - 1.70) * 10;
-        else if (cgpa >= 1.30) percentage = 67 + (cgpa - 1.30) * 10;
-        else if (cgpa >= 1.00) percentage = 60 + (cgpa - 1.00) * 10;
-        else percentage = 0;
-    }
-    else if (university === 'utm') {
-    if (cgpa >= 3.90) percentage = 90;
-    else if (cgpa >= 3.70) percentage = 80 + (cgpa - 3.70) * 10;
-    else if (cgpa >= 3.30) percentage = 75 + (cgpa - 3.30) * 10;
-    else if (cgpa >= 3.00) percentage = 70 + (cgpa - 3.00) * 10;
-    else if (cgpa >= 2.70) percentage = 65 + (cgpa - 2.70) * 10;
-    else if (cgpa >= 2.30) percentage = 60 + (cgpa - 2.30) * 10;
-    else if (cgpa >= 2.00) percentage = 55 + (cgpa - 2.00) * 10;
-    else if (cgpa >= 1.70) percentage = 50 + (cgpa - 1.70) * 10;
-    else if (cgpa >= 1.30) percentage = 45 + (cgpa - 1.30) * 10;
-    else if (cgpa >= 1.00) percentage = 40 + (cgpa - 1.00) * 10;
-    else if (cgpa >= 0.70) percentage = 35 + (cgpa - 0.70) * 10;
-    else percentage = 0;
-    }
+        } else if (university === 'nsu') {
+            if (cgpa >= 3.93) percentage = 93;
+            else if (cgpa >= 3.70) percentage = 90 + (cgpa - 3.70) * 10;
+            else if (cgpa >= 3.30) percentage = 87 + (cgpa - 3.30) * 10;
+            else if (cgpa >= 3.00) percentage = 83 + (cgpa - 3.00) * 10;
+            else if (cgpa >= 2.70) percentage = 80 + (cgpa - 2.70) * 10;
+            else if (cgpa >= 2.30) percentage = 77 + (cgpa - 2.30) * 10;
+            else if (cgpa >= 2.00) percentage = 73 + (cgpa - 2.00) * 10;
+            else if (cgpa >= 1.70) percentage = 70 + (cgpa - 1.70) * 10;
+            else if (cgpa >= 1.30) percentage = 67 + (cgpa - 1.30) * 10;
+            else if (cgpa >= 1.00) percentage = 60 + (cgpa - 1.00) * 10;
+            else percentage = 0;
+        } else if (university === 'utm') {
+            if (cgpa >= 3.90) percentage = 90;
+            else if (cgpa >= 3.70) percentage = 80 + (cgpa - 3.70) * 10;
+            else if (cgpa >= 3.30) percentage = 75 + (cgpa - 3.30) * 10;
+            else if (cgpa >= 3.00) percentage = 70 + (cgpa - 3.00) * 10;
+            else if (cgpa >= 2.70) percentage = 65 + (cgpa - 2.70) * 10;
+            else if (cgpa >= 2.30) percentage = 60 + (cgpa - 2.30) * 10;
+            else if (cgpa >= 2.00) percentage = 55 + (cgpa - 2.00) * 10;
+            else if (cgpa >= 1.70) percentage = 50 + (cgpa - 1.70) * 10;
+            else if (cgpa >= 1.30) percentage = 45 + (cgpa - 1.30) * 10;
+            else if (cgpa >= 1.00) percentage = 40 + (cgpa - 1.00) * 10;
+            else if (cgpa >= 0.70) percentage = 35 + (cgpa - 0.70) * 10;
+            else percentage = 0;
+        } else {
+            // University not found, return undefined
+            percentage = undefined;
+        }
 
         return percentage;
     }
