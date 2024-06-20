@@ -1,7 +1,7 @@
 const form = document.querySelector(".form");
 const dropdowns = document.querySelectorAll(".dropdown");
 
-// Check if Dropdowns are Exist
+// Check if Dropdowns Exist
 // Loop Dropdowns and Create Custom Dropdown for each Select Element
 if (dropdowns.length > 0) {
    dropdowns.forEach((dropdown) => {
@@ -9,7 +9,7 @@ if (dropdowns.length > 0) {
    });
 }
 
-// Check if Form Element Exist on Page
+// Check if Form Element Exists on Page
 if (form !== null) {
    form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -130,20 +130,14 @@ function filterItems(itemsArr, menu) {
    // Get the Indexes of Filtered Items
    const customOptions = menu.querySelectorAll(".dropdown-menu-inner div");
    const value = this.value.toLowerCase();
-   const filteredItems = itemsArr.filter((item) =>
-      item.value.toLowerCase().includes(value)
-   );
-   const indexesArr = filteredItems.map((item) => itemsArr.indexOf(item));
 
-   // Check if Option is not Inside Indexes Array
-   // And Hide it and if it is Inside Indexes Array and it is Hidden Show it
-   itemsArr.forEach((option) => {
-      if (!indexesArr.includes(itemsArr.indexOf(option))) {
-         customOptions[itemsArr.indexOf(option)].style.display = "none";
+   itemsArr.forEach((option, index) => {
+      const optionValue = option.value.toLowerCase();
+      const optionText = option.textContent.toLowerCase();
+      if (optionValue.includes(value) || optionText.includes(value)) {
+         customOptions[index].style.display = "block";
       } else {
-         if (customOptions[itemsArr.indexOf(option)].offsetParent === null) {
-            customOptions[itemsArr.indexOf(option)].style.display = "block";
-         }
+         customOptions[index].style.display = "none";
       }
    });
 }
